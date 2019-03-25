@@ -6,19 +6,19 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
   let length = preferences.length; 
   let count = 0;  
   for (let i = 0; i<length; i++) { 
-      let firstAngle = preferences[i] - 1;
-      if (firstAngle == i) {
+      let firstLover = preferences[i] - 1;
+      if (firstLover == i) {
         continue
       };
-      let secondAngle = preferences[firstAngle] - 1;
-      if (firstAngle == secondAngle) {
+      let secondLover = preferences[firstLover] - 1;
+      if (firstLover == secondLover) {
         continue
       };
-      let thirdAngle = preferences[secondAngle] - 1;
-      if (thirdAngle == secondAngle) {
+      let thirdLover = preferences[secondLover] - 1;
+      if (thirdLover == secondLover) {
         continue
       };
-      if (thirdAngle == i) {
+      if (thirdLover == i) {
           count++;
       }
    }
